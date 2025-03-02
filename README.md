@@ -49,6 +49,7 @@ This project provides two main tools:
 2. Install the required Python packages:
    ```bash
    pip install requests
+   pip install requests tkinter
 
 3. Download and set up ScanCode Toolkit (for Repository Dependency Extractor):
 
@@ -130,4 +131,4 @@ python dependency_checker.py
 ```
 
 ## License
-This project is licensed under the MIT License. See the LICENSE() file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
