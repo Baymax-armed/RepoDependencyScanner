@@ -43,7 +43,7 @@ This project provides two main tools:
 ### Steps ###
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/DependencyChecker.git
+   git clone https://github.com/Baymax-armed/RepoDependencyScanner.git
    cd DependencyChecker
 
 2. Install the required Python packages:
