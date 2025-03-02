@@ -27,7 +27,7 @@ This project provides two main tools:
 - **Search**: Search for specific dependencies or files in the table.
 - **Version Comparison**: Highlights outdated dependencies and suggests the latest version.
 
-### Repository Dependency Extractor
+####################### Repository Dependency Extractor ############################
 - **Scan Repository**: Scans a repository using ScanCode Toolkit to extract dependency information.
 - **Extract Binaries**: Finds all DLLs, EXEs, and other binary files in the repository.
 - **Generate JSON Report**: Combines ScanCode output with extracted binaries into a final JSON file.
