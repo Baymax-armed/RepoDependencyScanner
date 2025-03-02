@@ -41,27 +41,29 @@ This project provides two main tools:
 - ScanCode Toolkit (for Repository Dependency Extractor)
 - Required Python packages: `requests`, `tkinter`
 
-### Steps
+### Steps ###
 1. Clone the repository:
    ```bash
-   # git clone https://github.com/your-username/DependencyChecker.git
-   # cd DependencyChecker
+   git clone https://github.com/your-username/DependencyChecker.git
+   cd DependencyChecker
 
 2. Install the required Python packages:
-    # pip install requests
+   ```bash
+   pip install requests
 
-Download and set up ScanCode Toolkit (for Repository Dependency Extractor):
+3. Download and set up ScanCode Toolkit (for Repository Dependency Extractor):
 
-Download ScanCode
+   i.Download ScanCode
 
-Extract it and note the path to scancode.bat
+   ii.Extract it and note the path to scancode.bat
 
 ## Usage
 
 Dependency Checker
 1. Run the dependency_checker.py script:
-
-#python dependency_checker.py
+```bash
+python dependency_checker.py
+```
 2. Click on Upload JSON File to load a JSON file containing dependency information.
 
 3. The tool will display the dependencies, their current versions, and the latest available versions.
@@ -71,9 +73,9 @@ Dependency Checker
 ##################### Repository Dependency Extractor ########################
 
 Run the repo_dependency_extractor.py script:
-
+```bash
 #python repo_dependency_extractor.py
-
+```
 Enter the path to your repository when prompted.
 
 The tool will:
