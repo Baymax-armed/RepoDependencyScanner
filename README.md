@@ -73,7 +73,7 @@ python dependency_checker.py
 
    1. Run the repo_dependency_extractor.py script:
    ```bash
-   #python repo_dependency_extractor.py
+   python repo_dependency_extractor.py
    ```
    2. Enter the path to your repository when prompted.
 
@@ -130,4 +130,4 @@ python dependency_checker.py
 ```
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE() file for details.
