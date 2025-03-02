@@ -1,91 +1,79 @@
-Dependency Checker and Repository Dependency Extractor
+# Dependency Checker and Repository Dependency Extractor
+
 This project provides two main tools:
+1. **Dependency Checker**: A GUI-based tool to check the latest versions of dependencies listed in a JSON file.
+2. **Repository Dependency Extractor**: A tool to scan a repository, extract dependencies, and generate a JSON report.
 
-Dependency Checker: A GUI-based tool to check the latest versions of dependencies listed in a JSON file.
+---
 
-Repository Dependency Extractor: A tool to scan a repository, extract dependencies, and generate a JSON report.
+## Table of Contents
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+   - [Dependency Checker](#dependency-checker)
+   - [Repository Dependency Extractor](#repository-dependency-extractor)
+4. [Output](#output)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-Table of Contents
-Features
+---
 
-Installation
+## Features
 
-Usage
+####################### Dependency Checker ############################
+- **Upload JSON File**: Load a JSON file containing dependency information.
+- **Check Latest Versions**: Automatically fetches the latest version of each dependency from NuGet and PyPI.
+- **Sorting**: Sort the table by clicking on column headers.
+- **Search**: Search for specific dependencies or files in the table.
+- **Version Comparison**: Highlights outdated dependencies and suggests the latest version.
 
-Dependency Checker
+### Repository Dependency Extractor
+- **Scan Repository**: Scans a repository using ScanCode Toolkit to extract dependency information.
+- **Extract Binaries**: Finds all DLLs, EXEs, and other binary files in the repository.
+- **Generate JSON Report**: Combines ScanCode output with extracted binaries into a final JSON file.
 
-Repository Dependency Extractor
+---
 
-Output
+## Installation
 
-Contributing
+### Prerequisites
+- Python 3.x
+- ScanCode Toolkit (for Repository Dependency Extractor)
+- Required Python packages: `requests`, `tkinter`
 
-License
+### Steps
+1. Clone the repository:
+   ```bash
+   # git clone https://github.com/your-username/DependencyChecker.git
+   # cd DependencyChecker
 
-Features
-Dependency Checker
-Upload JSON File: Load a JSON file containing dependency information.
+2. Install the required Python packages:
+    # pip install requests
 
-Check Latest Versions: Automatically fetches the latest version of each dependency from NuGet and PyPI.
-
-Sorting: Sort the table by clicking on column headers.
-
-Search: Search for specific dependencies or files in the table.
-
-Version Comparison: Highlights outdated dependencies and suggests the latest version.
-
-Repository Dependency Extractor
-Scan Repository: Scans a repository using ScanCode Toolkit to extract dependency information.
-
-Extract Binaries: Finds all DLLs, EXEs, and other binary files in the repository.
-
-Generate JSON Report: Combines ScanCode output with extracted binaries into a final JSON file.
-
-Installation
-Prerequisites
-Python 3.x
-
-ScanCode Toolkit (for Repository Dependency Extractor)
-
-Required Python packages: requests, tkinter
-
-Steps
-Clone the repository:
-
-bash
-Copy
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-Install the required Python packages:
-
-bash
-Copy
-pip install requests
 Download and set up ScanCode Toolkit (for Repository Dependency Extractor):
 
-Download ScanCode from here.
+Download ScanCode
 
-Extract it and note the path to scancode.bat.
+Extract it and note the path to scancode.bat
 
-Usage
+## Usage
+
 Dependency Checker
-Run the dependency_checker.py script:
+1. Run the dependency_checker.py script:
 
-bash
-Copy
-python dependency_checker.py
-Click on Upload JSON File to load a JSON file containing dependency information.
+#python dependency_checker.py
+2. Click on Upload JSON File to load a JSON file containing dependency information.
 
-The tool will display the dependencies, their current versions, and the latest available versions.
+3. The tool will display the dependencies, their current versions, and the latest available versions.
 
-Use the Search bar to filter dependencies or click on column headers to sort the table.
+4. Use the Search bar to filter dependencies or click on column headers to sort the table.
 
-Repository Dependency Extractor
+##################### Repository Dependency Extractor ########################
+
 Run the repo_dependency_extractor.py script:
 
-bash
-Copy
-python repo_dependency_extractor.py
+#python repo_dependency_extractor.py
+
 Enter the path to your repository when prompted.
 
 The tool will:
@@ -96,7 +84,8 @@ Extract all binaries (DLLs, EXEs, etc.).
 
 Generate a final JSON report (dependencies_report.json).
 
-Output
+
+############# Output ##################
 Dependency Checker
 The tool displays a table with the following columns:
 
@@ -117,6 +106,7 @@ Update to this Version: Suggests the latest version if the dependency is outdate
 Repository Dependency Extractor
 The tool generates a JSON file (dependencies_report.json) with the following structure:
 
+_____________________________________________________________________________________________
 {
   "files": [
     {
@@ -134,24 +124,7 @@ The tool generates a JSON file (dependencies_report.json) with the following str
     }
   ]
 }
-Contributing
-Contributions are welcome! If you'd like to contribute, please follow these steps:
-
-Fork the repository.
-
-Create a new branch (git checkout -b feature/YourFeatureName).
-
-Commit your changes (git commit -m 'Add some feature').
-
-Push to the branch (git push origin feature/YourFeatureName).
-
-Open a pull request.
+_______________________________________________________________________________________________
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgments
-ScanCode Toolkit for dependency scanning.
-
-NuGet and PyPI for package version information.
-
