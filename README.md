@@ -13,8 +13,7 @@ This project provides two main tools:
    - [Dependency Checker](#dependency-checker)
    - [Repository Dependency Extractor](#repository-dependency-extractor)
 4. [Output](#output)
-5. [Contributing](#contributing)
-6. [License](#license)
+5. [License](#license)
 
 ---
 
@@ -59,7 +58,7 @@ This project provides two main tools:
 
 ## Usage
 
-Dependency Checker
+### Dependency Checker
 1. Run the dependency_checker.py script:
 ```bash
 python dependency_checker.py
@@ -70,45 +69,47 @@ python dependency_checker.py
 
 4. Use the Search bar to filter dependencies or click on column headers to sort the table.
 
-##################### Repository Dependency Extractor ########################
+### Repository Dependency Extractor
 
-Run the repo_dependency_extractor.py script:
+   1. Run the repo_dependency_extractor.py script:
+   ```bash
+   #python repo_dependency_extractor.py
+   ```
+   2. Enter the path to your repository when prompted.
+
+3. The tool will:
+
+   i. Scan the repository using ScanCode Toolkit.
+
+   ii. Extract all binaries (DLLs, EXEs, etc.).
+
+   iii.Generate a final JSON report (dependencies_report.json).
+
+
+## Output
+
+### Dependency Checker
+   1. The tool displays a table with the following columns:
+
+      i. File Path: Path to the file in the repository.
+
+      ii. License: Detected license of the file.
+
+      iii. Copyright: Copyright information.
+
+      iv. Package Name: Name of the dependency.
+
+      v. Current Version: Installed version of the dependency.
+
+      vi. CVE: CVE ID if any vulnerabilities are detected.
+
+      vii. Update to this Version: Suggests the latest version if the dependency is outdated.
+
+### Repository Dependency Extractor
+
+#### The tool generates a JSON file (dependencies_report.json) with the following structure:
+
 ```bash
-#python repo_dependency_extractor.py
-```
-Enter the path to your repository when prompted.
-
-The tool will:
-
-Scan the repository using ScanCode Toolkit.
-
-Extract all binaries (DLLs, EXEs, etc.).
-
-Generate a final JSON report (dependencies_report.json).
-
-
-############# Output ##################
-Dependency Checker
-The tool displays a table with the following columns:
-
-File Path: Path to the file in the repository.
-
-License: Detected license of the file.
-
-Copyright: Copyright information.
-
-Package Name: Name of the dependency.
-
-Current Version: Installed version of the dependency.
-
-CVE: CVE ID if any vulnerabilities are detected.
-
-Update to this Version: Suggests the latest version if the dependency is outdated.
-
-Repository Dependency Extractor
-The tool generates a JSON file (dependencies_report.json) with the following structure:
-
-_____________________________________________________________________________________________
 {
   "files": [
     {
@@ -126,7 +127,7 @@ ________________________________________________________________________________
     }
   ]
 }
-_______________________________________________________________________________________________
+```
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
